@@ -35,11 +35,11 @@ This application provides an intuitive interface for users to interact with serv
 
 4. **Deployed on Vercel**: 
    - The project is live and deployed on **Vercel**.
-   - You can access it here: [https://server-status-dashboard-lemon.vercel.app/] (https://server-status-dashboard-lemon.vercel.app/).
+   - You can access it here: [https://server-status-dashboard-lemon.vercel.app/](https://server-status-dashboard-lemon.vercel.app/).
 
 ---
 
-**Implementation Overview**:
+***Implementation Overview:
 
 Authentication
 - Users can log in using either email/password or Google sign-in.
