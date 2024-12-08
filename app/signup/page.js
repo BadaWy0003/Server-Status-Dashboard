@@ -19,7 +19,7 @@ export default function SignUp() {
       await signUp(email, password); // Call the signUp function from firebase
       router.push("/dashboard"); // Redirect to dashboard after successful sign-up
     } catch (err) {
-      setError(err.message); // Set error message if sign-up fails
+      setError("Error: " + err.message); // Set error message if sign-up fails
     }
   };
 
