@@ -1,9 +1,9 @@
 "use client";
 
+import './signup.css';
 import { useState } from "react";
 import { signUp } from "../../lib/firebase";
 import { useRouter } from "next/navigation";
-
 
 export default function SignUp() {
   const [email, setEmail] = useState("");
@@ -11,43 +11,39 @@ export default function SignUp() {
   const [error, setError] = useState(null);
   const router = useRouter();
 
-
   const handleSignUp = async (e) => {
     e.preventDefault();
     try {
       await signUp(email, password);
-    //   alert("Sign-up successful! You can now log in.");
-        router.push("/dashboard");
+      router.push("/dashboard");
     } catch (err) {
-      setError(err);
+      setError(err.message);
     }
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
-      <form onSubmit={handleSignUp} className="p-6 bg-white rounded shadow-md">
-        <h2 className="text-2xl font-bold mb-4">Sign Up</h2>
-        {error && <p className="text-red-500">{error}</p>}
+    <div className="signup-container">
+      <form onSubmit={handleSignUp} className="signup-form">
+        <h2 className="form-title">Sign Up</h2>
+        {error && <p className="form-error">{error}</p>}
         <input
           type="email"
           placeholder="Email"
-          className="w-full mb-4 p-2 border border-gray-300 rounded"
+          className="form-input"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
         <input
           type="password"
           placeholder="Password"
-          className="w-full mb-4 p-2 border border-gray-300 rounded"
+          className="form-input"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button
-          type="submit"
-          className="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600"
-        >
+        <button type="submit" className="form-button">
           Sign Up
         </button>
+        <p>Already have an account? <a className='login-link' href='/login'>Login</a></p>
       </form>
     </div>
   );

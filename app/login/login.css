@@ -1,0 +1,113 @@
+/* General Styles for the Login Page */
+.login-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #1a1c20; /* Dark background */
+  }
+  
+  .login-form {
+    background-color: #24272b; /* Dark form background */
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    width: 400px;
+    text-align: center;
+    
+  }
+  
+  .form-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #f4f4f4;
+    margin-bottom: 1rem;
+  }
+  
+  p{
+    color: white;
+  }
+  .form-error {
+    color: #e53e3e; /* Error red color */
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .form-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    border: 1px solid #2d3748;
+    background-color: #1c1f24;
+    color: #e2e8f0;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .form-input:focus {
+    border-color: #0d92a3; /* Light blue focus */
+    background-color: #292c33;
+  }
+  
+  .form-button {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 2px solid #0d92a3;
+    background-color: #0d92a3;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 0.5rem;
+  }
+  
+  .form-button:hover {
+    background-color: transparent;
+    color: #0d92a3;
+  }
+  
+  
+.secondary-button {
+    margin-top: 1rem;
+    background-color: transparent;
+    border: 2px solid #0d92a3;
+    color: #0d92a3;
+  }
+  
+  .secondary-button:hover {
+    background-color: #0d92a3;
+    color: white;
+  }
+
+  .signup-link{
+    font-weight: bold;
+    color: #0d92a3;
+    text-decoration: underline;
+    transition: all 0.3s;
+  }
+  .signup-link:hover{
+    color: #0d6c79;
+    text-decoration: none;
+  }
+
+  .google-login-container {
+    margin-top: 0.5rem;
+  }
+  
+  .google-login-container button {
+    background-color: #0d92a3 !important; 
+    color: white !important;
+    border-radius: 6px !important;
+    border: 2px solid #0d92a3 !important;
+    font-weight: bold !important;
+    transition: all 0.3s ease !important;
+    width: fit-content;
+  }
+  
+ 
+
+
+  

@@ -1,17 +1,15 @@
 "use client";
+import './login.css';
 import { useState } from "react";
 import { logIn, signInWithGoogle } from "../../lib/firebase";
 import { useRouter } from "next/navigation";
 import GoogleButton from "react-google-button";
-
-
 
 export default function LogIn() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
   const router = useRouter();
-
 
   const handleGoogleLogin = async () => {
     try {
@@ -27,44 +25,48 @@ export default function LogIn() {
     e.preventDefault();
     try {
       await logIn(email, password);
-    //   alert("Log-in successful!");
-        router.push("/dashboard");
+      router.push("/dashboard");
     } catch (err) {
       setError(err);
     }
   };
 
+  const handleSignUpRedirect = () => {
+    router.push("/signup"); // Navigate to the Sign Up page
+  };
+
+
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
-      <form onSubmit={handleLogIn} className="p-6 bg-white rounded shadow-md">
-        <h2 className="text-2xl font-bold mb-4">Log In</h2>
-        {error && <p className="text-red-500">{error}</p>}
+    <div className="login-container">
+      <form onSubmit={handleLogIn} className="login-form">
+        <h2 className="form-title">Log In</h2>
+        {error && <p className="form-error">{error}</p>}
         <input
           type="email"
           placeholder="Email"
-          className="w-full mb-4 p-2 border border-gray-300 rounded"
+          className="form-input"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
         <input
           type="password"
           placeholder="Password"
-          className="w-full mb-4 p-2 border border-gray-300 rounded"
+          className="form-input"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button
-          type="submit"
-          className="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600"
-        >
+        <button type="submit" className="form-button">
           Log In
         </button>
-        <GoogleButton
-            onClick={handleGoogleLogin}
-            style={{ width: "100%" }}
-            />;
-
+        <p>Don't have an account?<a className='signup-link' href='/signup'>Create an account</a></p>
+        <p>Or</p>
         
+        <div className="google-login-container">
+          <GoogleButton
+            onClick={handleGoogleLogin}
+            style={{ width: "100%", backgroundColor: "#0d92a3" }}
+          />
+        </div>
       </form>
     </div>
   );
