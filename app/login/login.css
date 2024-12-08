@@ -70,7 +70,7 @@
   }
   
   
-.secondary-button {
+/* .secondary-button {
     margin-top: 1rem;
     background-color: transparent;
     border: 2px solid #0d92a3;
@@ -80,7 +80,7 @@
   .secondary-button:hover {
     background-color: #0d92a3;
     color: white;
-  }
+  } */
 
   .signup-link{
     font-weight: bold;

@@ -1,0 +1,61 @@
+/* General Styling for Home Page */
+.home-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #1a1c20; /* Dark background */
+  }
+  
+  .home-content {
+    text-align: center;
+    padding: 2rem;
+    background-color: #24272b; /* Dark background for content */
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    width: 400px;
+  }
+  
+  .home-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #f4f4f4; /* Light text color */
+    margin-bottom: 1rem;
+  }
+  
+  .home-description {
+    font-size: 1.2rem;
+    color: #e2e8f0; /* Light description color */
+    margin-bottom: 2rem;
+  }
+  
+  .home-button {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 2px solid #0d92a3;
+    background-color: #0d92a3;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 1rem;
+  }
+  
+  .home-button:hover {
+    background-color: transparent;
+    color: #0d92a3;
+  }
+  
+  .secondary-button {
+    background-color: transparent;
+    border: 2px solid #0d92a3;
+    color: #0d92a3;
+  }
+  
+  .secondary-button:hover {
+    background-color: #0d92a3;
+    color: white;
+  }
+  

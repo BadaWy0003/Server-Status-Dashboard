@@ -31,9 +31,7 @@ export default function LogIn() {
     }
   };
 
-  const handleSignUpRedirect = () => {
-    router.push("/signup"); // Navigate to the Sign Up page
-  };
+
 
 
   return (
