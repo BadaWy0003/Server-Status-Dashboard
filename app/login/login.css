@@ -1,14 +1,13 @@
-/* General Styles for the Login Page */
 .login-container {
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-color: #1a1c20; /* Dark background */
+    background-color: #1a1c20; 
   }
   
   .login-form {
-    background-color: #24272b; /* Dark form background */
+    background-color: #24272b; 
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
@@ -28,7 +27,7 @@
     color: white;
   }
   .form-error {
-    color: #e53e3e; /* Error red color */
+    color: #e53e3e; 
     font-size: 1rem;
     margin-bottom: 1rem;
   }
@@ -46,7 +45,7 @@
   }
   
   .form-input:focus {
-    border-color: #0d92a3; /* Light blue focus */
+    border-color: #0d92a3; 
     background-color: #292c33;
   }
   
@@ -105,6 +104,10 @@
     font-weight: bold !important;
     transition: all 0.3s ease !important;
     width: fit-content;
+  }
+
+  hr{
+    margin: 1rem 0;
   }
   
  

@@ -111,7 +111,7 @@ body, html {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent dark background */
+    background-color: rgba(0, 0, 0, 0.6); 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -119,7 +119,7 @@ body, html {
   }
   
   .filter-popup {
-    background-color: #24272b; /* Dark background for modal */
+    background-color: #24272b; 
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
@@ -171,7 +171,7 @@ body, html {
   /* Table */
   .table-container {
     margin-top: 20px;
-    background-color: #24272b; /* Dark background for table */
+    background-color: #24272b; 
     border-radius: 8px;
     box-shadow: 0 0px 20px rgba(59, 59, 59, 0.2);
     padding: 20px;
@@ -195,42 +195,42 @@ body, html {
     text-align: left;
     font-size: 1rem;
     border-bottom: 1px solid #2d3748;
-    color: #e2e8f0; /* Light text for table content */
+    color: #e2e8f0; 
   }
   
   .server-table th {
-    background-color: #2b6cb0; /* Blue for header */
+    background-color: #2b6cb0; 
     color: white;
     font-weight: bold;
   }
   
   .server-table tr:nth-child(even) {
-    background-color: #1c1f24; /* Alternating row colors */
+    background-color: #1c1f24; 
   }
   
   .server-table tr:hover {
-    background-color: #2a2e35; /* Highlighted row on hover */
+    background-color: #2a2e35; 
     transition: all 0.3s ease;
   }
   
   .table-cell.status-up {
-    color: #48bb78; /* Green for up */
+    color: #48bb78; 
   }
 
   .table-cell.status-degraded {
-    color: yellow; /* Neutral gray for unknown */
+    color: yellow; 
   }
   
   .table-cell.status-down {
-    color: #e53e3e; /* Red for down */
+    color: #e53e3e; 
   }
   
   .table-cell.status-maintenance {
-    color: #ed8936; /* Orange for maintenance */
+    color: #ed8936; 
   }
   
   .table-cell.status-unknown {
-    color: #718096; /* Neutral gray for unknown */
+    color: #718096; 
   }
   
   .text-white{
@@ -253,7 +253,7 @@ body, html {
 
   /* Expanded Row */
   .expanded-row {
-    background-color: #1c1f24; /* Slightly lighter than table background */
+    background-color: #1c1f24; 
   }
   
   .expanded-cell {
@@ -269,9 +269,9 @@ body, html {
   /* Loading and Error Messages */
   .loading {
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    height: 100vh; /* Full viewport height */
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
     font-size: 1.5rem;
     color: #e2e8f0;
   }
