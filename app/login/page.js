@@ -19,7 +19,8 @@ export default function LogIn() {
       console.log("Logged in user:", user);
       router.push("/dashboard"); // Redirect to the dashboard after successful login
     } catch (error) {
-      console.error("Login failed:", error); // Handle errors during Google login
+      setError("Google login failed. Please try again."); // Handle Google login failure
+      console.error("Login failed:", error);
     }
   };
 
@@ -30,7 +31,7 @@ export default function LogIn() {
       await logIn(email, password); // Log in with email and password
       router.push("/dashboard"); // Redirect to the dashboard after successful login
     } catch (err) {
-      setError(err); // Set error if login fails
+      setError("Invalid email or password. Please try again."); // Show error for invalid login
     }
   };
 
@@ -41,7 +42,7 @@ export default function LogIn() {
         <h2 className="form-title">Log In</h2>
 
         {/* Display error message if login fails */}
-        {error && <p className="form-error">{error.message}</p>}
+        {error && <p className="form-error">{error}</p>}
 
         {/* Email input field */}
         <input
@@ -68,10 +69,11 @@ export default function LogIn() {
 
         {/* Link to sign-up page */}
         <p>
-          Don't have an account?
+          Don't have an account? 
           <a className='signup-link' href='/signup'>Create an account</a>
         </p>
-        <hr></hr>
+
+        <hr />
         <p>Or</p>
 
         {/* Google Login button */}
